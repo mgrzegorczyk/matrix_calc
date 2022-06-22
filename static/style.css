@@ -1,0 +1,13 @@
+
+h1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 10em
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }

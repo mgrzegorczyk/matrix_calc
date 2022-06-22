@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Podstrona</title>
+</head>
+<body>
+    <h1>Cześć {{kto}}</h1>
+    <p>Strona utworzona we Flasku!</p>
+    <ul>
+      {% for liczba in liczby %}
+          <li>{{ liczba }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

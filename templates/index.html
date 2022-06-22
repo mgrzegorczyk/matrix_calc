@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Pierwsza strona</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Witaj świecie!</h1>
+    <p>Strona stworzona we Flasku!</p>
+    <!--enctype (domyslnie): application/x-www-form-urlencoded-->
+     <form action="{{ url_for('rysunek') }}" method="POST" enctype="multipart/form-data">
+        Przedstaw się:<br><input type="text" name="nazwa">
+        <br>
+        Twoja ulubiona liczba pierwsza:
+        <br>
+        <input type="number" name="liczba" value=11><br>
+        Twój ulubiony plik:
+        <br>
+        <input type="file" name="plik">
+
+        <input type="submit" value="Wyślij">
+    </form>
+</body>
+</html>
