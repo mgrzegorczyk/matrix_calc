@@ -11,6 +11,12 @@ p {
     font-size: medium ;
 }
 
+p1 {
+    text-align: left;
+    text-decoration-color: greenyellow;
+    font-size: small;
+}
+
 footer {
     position:absolute;
 		bottom:0;
@@ -27,3 +33,9 @@ img {
     margin-right: auto;
     width: 50%;
   }
+a {
+    color: rgb(11, 228, 11);
+}
+li {
+    color: rgb(11, 228, 11)
+}
