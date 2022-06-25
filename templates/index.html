@@ -2,24 +2,18 @@
 <html lang="pl">
 <head>
     <meta charset="utf-8">
-    <title>Pierwsza strona</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Strona na Zaliczenie</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Witaj świecie!</h1>
-    <p>Strona stworzona we Flasku!</p>
-    <!--enctype (domyslnie): application/x-www-form-urlencoded-->
-     <form action="{{ url_for('rysunek') }}" method="POST" enctype="multipart/form-data">
-        Przedstaw się:<br><input type="text" name="nazwa">
-        <br>
-        Twoja ulubiona liczba pierwsza:
-        <br>
-        <input type="number" name="liczba" value=11><br>
-        Twój ulubiony plik:
-        <br>
-        <input type="file" name="plik">
-
-        <input type="submit" value="Wyślij">
-    </form>
+    <h1>Witamy Serdecznie!
+        <p>Zdecydwoaliśmy się, jako projekt zaliczeniowy przedstawić prosty kalklulator macierzowy.</p>
+        <p>W planie mieliśmy, by obsługiwał takie działanaia jak doadwanie/odejmowanie macierzy, transpozycje, liczenie wyznacznika, liczenie macierzy odwrotnej i rozwiązywanie prostego układu równań. </p>
+        <p>Udało nam się spełnić wyznaczone cele. Aby przejść do działań na macierzach najpeirw trzeba na głównej stronie wejść w link do kalkulatora i podać wymiar macierzy, w założwniach projektu maksymaln wymiar to 5x5.</p>
+    </h1>
+    <h2 href="podstrona1.html">Kontakt</h2>
+    <h2 href="podstrona2.html" >Niezbędne Definicje</h2>
+    <h2 href="podstrona3.html">Kalkulator Macierzowy</h2>
+    <footer>Projekt Technologie Informacyjne 2022 - Matematyka Stosowna</footer>
 </body>
 </html>
