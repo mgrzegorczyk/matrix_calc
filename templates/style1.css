@@ -1,21 +1,15 @@
-
 h1 {
     text-align: center;
     font-size: 300%;
     border: solid rgb(11, 228, 11);
 }
-
-
+h2{
+    text-align: center;
+}
 p {
     text-align: center;
     text-decoration-color: greenyellow;
     font-size: medium ;
-}
-
-p1 {
-    text-align: left;
-    text-decoration-color: greenyellow;
-    font-size: large;
 }
 
 footer {
@@ -39,4 +33,12 @@ a {
 }
 li {
     color: rgb(11, 228, 11)
+}
+
+.MACIERZA {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 20px; 
+    border: 1px solid black; 
+    width: 50%; 
 }
