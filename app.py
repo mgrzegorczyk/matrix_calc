@@ -7,13 +7,14 @@ from flask import request, redirect, url_for
 from werkzeug.utils import secure_filename
 import os
 import tempfile
-
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import io
 import base64
 from flask import session
+from numpy import matrix, linalg
+
 
 
 #from flask import Response
@@ -34,6 +35,33 @@ def strona2():
 def stona3():
     return render_template('podstrona2.html')
 
-@app.route('/podstrona3.html')
+@app.route('/podstrona3.html',methods=["POST","GET"])
 def stona4():
-    return render_template('podstrona3.html')
+    if request.method=="POST":
+        cell1=request.form["cell1"]
+        cell2=request.form["cell2"]
+        cell3=request.form["cell3"]
+        cell4=request.form["cell4"]
+        cell5=request.form["cell5"]
+        cell6=request.form["cell6"]
+        cell7=request.form["cell7"]
+        cell8=request.form["cell8"]
+        cell9=request.form["cell9"]
+
+        kom1=request.form["kom1"]
+        kom2=request.form["kom2"]
+        kom3=request.form["kom3"]
+        kom4=request.form["kom4"]
+        kom5=request.form["kom5"]
+        kom6=request.form["kom6"]
+        kom7=request.form["kom7"]
+        kom8=request.form["kom8"]
+        kom9=request.form["kom9"]
+        
+        matrix1= matrix([[cell1,cell2,cell3],[cell4,cell5,cell6],[cell7,cell8,cell9]])
+        matrix2=matrix([[kom1,kom2,kom3],[kom4,kom5,kom6],[kom7,kom8,kom9]])
+        added=matrix1+matrix2
+        return render_template('stronarestowa.html',added=added)
+    else:
+        return render_template('podstrona3.html')
+
