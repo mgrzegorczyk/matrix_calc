@@ -3,51 +3,48 @@
 <head>
     <meta charset="utf-8">
     <title>Kalkulator Macierzowy</title>
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='style1.css')}}">
 </head>
 <body>
-    <script>
-    </script>
     <header>
         <h1>Kalkulator Macierzowy</h1>
     </header>
     <table>
-    <h2>Wymiar Macierzy A: </h2>
-    <p><select>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-    </select>
-    &times;
-    <select>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-    </select>
-    </p>
-    <h2><input type="submit" value="Stwórz"></h2>
-    <h2>Wymiar Macierzy B: </h2>
-    <p><select>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-    </select>
-    &times;
-    <select>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-    </select>
-    <h2><input type="submit" value="Stwórz"></h2>
-    </p>
+        <caption>Macierz A</caption>
+        <tr>
+            <td> <input type="number" name="cell1"></td>
+            <td> <input type="number" name="cell2"></td>
+            <td> <input type="number" name="cell3"></td> 
+        </tr>
+        <tr>
+            <td> <input type="number" name="cell4"></td>
+            <td> <input type="number" name="cell5"></td>
+            <td> <input type="number" name="cell6"></td> 
+        </tr>
+        <tr>
+            <td> <input type="number" name="cell7"></td>
+            <td> <input type="number" name="cell8"></td>
+            <td> <input type="number" name="cell9"></td> 
+        </tr>
+    </table>
+    <table>
+        <caption>Macierz B</caption>
+        <tr>
+            <td> <input type="number" name="kom1"></td>
+            <td> <input type="number" name="kom2"></td>
+            <td> <input type="number" name="kom3"></td> 
+        </tr>
+        <tr>
+            <td> <input type="number" name="kom4"></td>
+            <td> <input type="number" name="kom5"></td>
+            <td> <input type="number" name="kom6"></td> 
+        </tr>
+        <tr>
+            <td> <input type="number" name="kom7"></td>
+            <td> <input type="number" name="kom8"></td>
+            <td> <input type="number" name="kom9"></td> 
+        </tr>
+    </table>
     <footer>Projekt Technologie Informacyjne 2022 - Matematyka Stosowna</footer>
 </body>
 </html>
