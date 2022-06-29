@@ -57,11 +57,20 @@ def stona4():
         kom7=request.form["kom7"]
         kom8=request.form["kom8"]
         kom9=request.form["kom9"]
-        
-        matrix1= matrix([[cell1,cell2,cell3],[cell4,cell5,cell6],[cell7,cell8,cell9]])
-        matrix2=matrix([[kom1,kom2,kom3],[kom4,kom5,kom6],[kom7,kom8,kom9]])
-        added=matrix1+matrix2
-        return render_template('stronarestowa.html',added=added)
+        matrix1= [[cell1,cell2,cell3],[cell4,cell5,cell6],[cell7,cell8,cell9]]
+        matrix2=[[kom1,kom2,kom3],[kom4,kom5,kom6],[kom7,kom8,kom9]]
+        result = [[0,0,0],
+         [0,0,0],
+         [0,0,0]]
+        for i in range(len(matrix1)):
+        # iterate through columns
+            for j in range(len(matrix1[0])):
+                result[i][j] = matrix1[i][j] + matrix2[i][j]
+        #return result
+        return redirect('stronkatestowa',added=result)
     else:
         return render_template('podstrona3.html')
 
+@app.route("/podstrona3.html?add=Prześlij#")
+def stronkatestowa(added):
+    return render_template('stronatestowa.html',added=added)
